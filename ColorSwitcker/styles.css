@@ -1,0 +1,64 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: background 0.5s ease-in-out;
+}
+
+.canvas {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 400px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666;
+  margin-top: 15px;
+}
+
+.button {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.2);
+}
+
+#grey {
+  background: grey;
+}
+
+#white {
+  background: white;
+  border: 1px solid #ddd;
+}
+
+#blue {
+  background: blue;
+}
+
+#yellow {
+  background: yellow;
+}
