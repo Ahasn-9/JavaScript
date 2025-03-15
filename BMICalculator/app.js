@@ -16,4 +16,8 @@ form.addEventListener("submit", function (e) {
 
     results.innerHTML = `<span>${bmi}</span>`;
   }
+  // BMI Categories:
+  // Underweight = <18.5
+  // Normal weight = 18.5–24.9
+  // Overweight = 25–29.9
 });
