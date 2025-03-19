@@ -1,4 +1,3 @@
-<!-- SetInterval and clearInterval -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,17 +8,26 @@
  </head>
 
  <body>
-  <h1>Learning JS</h1>
+  <h1>Changing the Background Colour of the Page</h1>
   <button id="start">Start</button>
   <button id="stop">Stop</button>
 
   <script>
+   const randomClr = () => {
+    const hex = '0123456789ABCDEF';
+    let clr = '#';
+    for (let i = 0; i < 6; i++) {
+     clr += hex[Math.floor(Math.random() * 16)];
+    }
+    return clr;
+   };
+
    let intervalId;
 
    document.querySelector('#start').addEventListener('click', () => {
     if (!intervalId) {
      intervalId = setInterval(() => {
-      console.log('Hello World', Math.random());
+      document.body.style.backgroundColor = randomClr();
      }, 1000);
     }
    });
@@ -28,6 +36,9 @@
     clearInterval(intervalId);
     intervalId = null;
    });
+  </script>
+
+
   </script>
  </body>
 
