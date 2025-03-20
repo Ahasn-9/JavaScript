@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ </head>
+
+ <body>
+  <h1>API</h1>
+  <p>API stands for Application Programming Interface. It is a set of rules that allows one piece of software
+   application to talk to another. It defines the methods for requesting and managing data from the server.</p>
+
+ </body>
+ <script>
+  const url = 'https://api.github.com/users/Ahasn-9';
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', url);
+  xhr.onreadystatechange = function () {
+   console.log(xhr.readyState);
+   if (xhr.readyState === 4) {
+    const data = JSON.parse(xhr.responseText);
+    console.log(data);
+    console.log(data.login);
+   }
+  };
+  xhr.send();
+ </script>
+
+</html>
